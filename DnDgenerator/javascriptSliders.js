@@ -1,5 +1,5 @@
 var minSliderValue = $("#strengthSlider").data("slider-min");
-var maxSliderValue = $("#StrengthSlider").data("slider-max");
+var maxSliderValue = $("#strengthSlider").data("slider-max");
 
 
 //Strength
