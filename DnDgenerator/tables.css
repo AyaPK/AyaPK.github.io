@@ -10,9 +10,11 @@ p {
 
 tr {
     border: 3px solid rgb(255, 255, 255);
+    background:"resources/images/marbleBackground";
 }
 
 td {
     border: 0px inset rgba(0,0,0,0.83);
 border-radius: 20px;
+
 }
