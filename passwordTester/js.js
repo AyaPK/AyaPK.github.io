@@ -9,6 +9,7 @@ function testPassword(){
   var lengthCheck = true
   var numCheck = false
   var capCheck = false
+  var specCheck = false
 
   //Check Password Length
   if(passwordInput.length<8){
@@ -28,11 +29,10 @@ function testPassword(){
     finalCheck.push("Please use at least one number in your password <br/>");
   }
 
-
   //Check for a capital
   for(b = 0; b < passwordInput.length; b++){
     var cap = passwordInput[b]
-    if(isNaN(cap) && cap === cap.toUpperCase()){
+    if(isNaN(cap) && cap === cap.toUpperCase() && /^[a-zA-Z]$/.test(cap) == true){
       capCheck = true
     }
   }
@@ -40,8 +40,19 @@ function testPassword(){
     finalCheck.push("Please use at least one capital letter in your password <br/>");
   }
 
+  //Check for special characters
+  for(c=0;c<passwordInput.length;c++){
+    var spec = passwordInput[c]
+    if(isNaN(spec) && /^[a-zA-Z0-9]$/.test(spec) == false){
+      specCheck = true
+    }
+  }
+  if(specCheck == false){
+    finalCheck.push("Please use at least one special character <br/>");
+  }
 
-  if(lengthCheck && numCheck && capCheck){
+//Check results and feed them back
+  if(lengthCheck && numCheck && capCheck && specCheck){
     finalCheck.push("Your password meets all of our requirements!");
   } else {
     finalCheck.push("There are issues with your password, please check them and fix them");
