@@ -8,6 +8,7 @@ function testPassword(){
   ]
   var lengthCheck = true
   var numCheck = false
+  var capCheck = false
 
   //Check Password Length
   if(passwordInput.length<8){
@@ -28,10 +29,19 @@ function testPassword(){
   }
 
 
- 
+  //Check for a capital
+  for(b = 0; b < passwordInput.length; b++){
+    var cap = passwordInput[b]
+    if(isNaN(cap) && cap === cap.toUpperCase()){
+      capCheck = true
+    }
+  }
+  if(capCheck == false){
+    finalCheck.push("Please use at least one capital letter in your password <br/>");
+  }
 
 
-  if(lengthCheck && numCheck){
+  if(lengthCheck && numCheck && capCheck){
     finalCheck.push("Your password meets all of our requirements!");
   } else {
     finalCheck.push("There are issues with your password, please check them and fix them");
