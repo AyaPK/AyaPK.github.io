@@ -28,7 +28,10 @@ function testPassword(){
   }
 
 
-  if(lengthCheck){
+ 
+
+
+  if(lengthCheck && numCheck){
     finalCheck.push("Your password meets all of our requirements!");
   } else {
     finalCheck.push("There are issues with your password, please check them and fix them");
