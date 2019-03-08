@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bingo player</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheet.css" type="text/css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../JavaScript.html">Javascript stuff</a></li>
+            <li><a href="../About.html">About Me</a></li>
+            <li><a href="../Contact.html">Contact Details</a></li>
+          </ul>
+  <button onclick="generateCard()">GenerateCard</button>
+<table>
+    <tr>
+  <td><p id="number1"></p></td>
+  <td><p id="number2"></p></td>
+  <td><p id="number3"></p></td>
+</tr><tr>
+  <td><p id="number4"></p></td>
+  <td><p id="number5"></p></td>
+  <td><p id="number6"></p></td>
+</tr><tr>
+  <td><p id="number7"></p></td>
+  <td><p id="number8"></p></td>
+  <td><p id="number9"></p></td>
+</tr>
+</table>
+  <script src="cardGenerate.js"></script>
+  </body>
+
+  <button onclick="test()">Pull number</button>
+  <p id="lastNumber"></p>
+  <p id="pulledNumbers"></p>
+
+<button onclick="check()">Check for matches</button>
+
+  <button onclick="reset()">Reset game</button>
+</html>
