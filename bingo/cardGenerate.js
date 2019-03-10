@@ -70,7 +70,7 @@ function test() {
 function check() {
    for (b=0; b<pulledNumbers.length; b++){
       if(pulledNumbers.includes(cardNumbers[b])){
-         cardNumbers[b] = ("<s>"+cardNumbers[b]+"</s>")
+         cardNumbers[b] = ("<p style=\"background-color:lightgreen\"><s>"+cardNumbers[b]+"</s></p>")
          document.getElementById("number1").innerHTML = (cardNumbers[0]);
          document.getElementById("number2").innerHTML = (cardNumbers[1]);
          document.getElementById("number3").innerHTML = (cardNumbers[2]);
