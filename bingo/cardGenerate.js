@@ -86,6 +86,7 @@ function check() {
 function reset() {
    cardNumbers = ["","","","","","","","",""]
    pulledNumbers = [""]
+   lastNumber = [""]
    document.getElementById("number1").innerHTML = (cardNumbers[0]);
    document.getElementById("number2").innerHTML = (cardNumbers[1]);
    document.getElementById("number3").innerHTML = (cardNumbers[2]);
@@ -96,6 +97,7 @@ function reset() {
    document.getElementById("number8").innerHTML = (cardNumbers[7]);
    document.getElementById("number9").innerHTML = (cardNumbers[8]);
    document.getElementById("pulledNumbers").innerHTML = (cardNumbers[1]);
+   document.getElementById("lastNumber").innerHTML - (lastNumber);
 }
 //end of reset
 
