@@ -97,7 +97,7 @@ function reset() {
    document.getElementById("number8").innerHTML = (cardNumbers[7]);
    document.getElementById("number9").innerHTML = (cardNumbers[8]);
    document.getElementById("pulledNumbers").innerHTML = (cardNumbers[1]);
-   document.getElementById("lastNumber").innerHTML - (lastNumber);
+   document.getElementById("lastNumber").innerHTML = (lastNumber);
 }
 //end of reset
 
