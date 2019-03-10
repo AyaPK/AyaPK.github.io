@@ -92,7 +92,7 @@ function reset() {
    pulledNumbers = [""]
    lastNumber = [""]
    bingo = false
-   document.getElementById("bingoTest").innerHTML = ("No bingo found...?");
+   document.getElementById("bingoTest").innerHTML = ("");
    document.getElementById("number1").innerHTML = (cardNumbers[0]);
    document.getElementById("number2").innerHTML = (cardNumbers[1]);
    document.getElementById("number3").innerHTML = (cardNumbers[2]);
