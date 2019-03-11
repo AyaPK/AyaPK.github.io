@@ -59,3 +59,8 @@ function testPassword(){
   }
   document.getElementById("result").innerHTML = (finalCheck.join(""));
 }
+
+//reveal password
+function reveal(){
+  document.getElementById("passInput").type = "text";
+}

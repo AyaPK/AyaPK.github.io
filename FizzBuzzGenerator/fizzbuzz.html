@@ -7,13 +7,35 @@
   <link rel="stylesheet" href="../stylesheet.css" type="text/css">
   </head>
   <body>
-      <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../JavaScript.html">Javascript stuff</a></li>
-          <li><a href="../About.html">About Me</a></li>
-          <li><a href="../Contact.html">Contact Details</a></li>
-          
-        </ul>
+    <!--MENU START-->
+    <ul id="navbar">
+        <li class="button1"> <a href="#">Home</a> </li>
+        <li class="button2"> <a href="#">Javascript Projects</a>
+  
+          <ul class="options2">
+            <li class=""> <a href="../DnDgenerator/experimentsInSliders.html">DnD Character Sheet</a> </li>
+            <li class=""> <a href="../FizzBuzzGenerator/fizzbuzz.html">FizzBuzz Generator</a> </li>
+            <li class=""> <a href="../passwordTester/index.html">Password Validator</a> </li>
+            <li class=""> <a href="../bingo/index.html">Javascript Bingo Game</a> </li>
+          </ul>
+  
+        </li>
+        <li class="button3"> <a href="#">About me</a>
+          <ul class="options3">
+            <li class=""> <a href="#">Skillset</a> </li>
+            <li class=""> <a href="#">Qualifications</a> </li>
+          </ul>
+        </li>
+        <li class="button4"> <a href="#">Contact info</a> 
+        <ul class="options4">
+          <li class=""> <a href="#">Contact form</a> </li>
+          <li class=""> <a href="#">Social Media</a> </li>
+          <li class=""> <a href="#">Get in touch</a> </li>
+        </ul></li>
+        
+      </ul>
+      <!--MENU END-->
+
     <p> My answer to the FizzBuzz challenge that I was recently made aware of. <br> Choose two numbers to fizzbuzz and the words you would like them to present! </p>
     <input type="text" class="form-control" id="num1" value="Number 1" size="10"/>
     <input type="text" class="form-control" id="num2" value="Number 2" size="10"/>
@@ -27,6 +49,11 @@
 
   
 <script src="fizzBuzz.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="../dependencies.js"></script>
     
 
   </body>
