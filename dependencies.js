@@ -2,6 +2,7 @@ $('.options1').hide()
 $('.options2').hide()
 $('.options3').hide()
 $('.options4').hide()
+$('.options5').hide()
 
 $('.button1').hover(function() {
   $(this).toggleClass("active");
@@ -21,4 +22,9 @@ $('.button3').hover(function() {
 $('.button4').hover(function() {
   $(this).toggleClass("active");
   $('.options4').slideToggle(200);
+})
+
+$('.button5').hover(function() {
+  $(this).toggleClass("active");
+  $('.options5').slideToggle(200);
 })
