@@ -83,3 +83,18 @@ p {
   border-bottom: 2px solid black;
 }
 
+.iframes {
+  display: inline;
+  list-style-type: none;
+}
+
+.mainwebsite {
+  width: 78%;
+  padding-right: 25px;
+  height: 80%;
+}
+
+.mobile {
+  width: 180%;
+  height: 80%;
+}
