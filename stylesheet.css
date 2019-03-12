@@ -98,3 +98,23 @@ p {
   width: 180%;
   height: 80%;
 }
+
+h3 {
+  font-size: 27px;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 8px #000000;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  font-size: 27px;
+}
+
+table {
+  height: 50%;
+}
+
+tr {
+  height: 10%;
+}
