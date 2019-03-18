@@ -38,7 +38,7 @@ document.getElementById("navbar").innerHTML = (`
  `)
 
 
-  //run menu JS after previous JS has loaded in to build the menu
+//run menu JS after previous JS has loaded in to build the menu
 $(window).bind("load", function () {
 
   $('.options1').hide()
