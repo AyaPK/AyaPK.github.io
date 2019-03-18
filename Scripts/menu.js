@@ -33,9 +33,9 @@ document.getElementById("navbar").innerHTML = (`
     <li class=""> <a href="#">Get in touch</a> </li>
   </ul></li></div> `)
 
-$(window).bind("load", function () {
-  // code goes here
 
+  //run menu JS after previous JS has loaded in to build the menu
+$(window).bind("load", function () {
 
   $('.options1').hide()
   $('.options2').hide()

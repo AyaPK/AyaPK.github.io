@@ -1,0 +1,44 @@
+.blogImage1 {
+  float: right;
+}
+.blogImage2 {
+  float: left;
+  padding-top: 20px;
+}
+
+.mainHeader {
+  float: center;
+}
+
+.columnRight {
+  float: right;
+}
+
+.container {
+  padding-left: 20px;
+  width: 80%;
+  float: center;
+}
+.leftText {
+  float: left;
+  padding-right: 30px;
+}
+
+.rightText {
+  float: left;
+}
+/*
+table {
+  border: 1px solid white;
+  border-color: white;
+  text-align: top;
+}
+
+tr {
+      border: 1px solid white;
+}
+
+td {
+  border: 1px solid white;
+}
+*/
