@@ -15,7 +15,7 @@ document.getElementById("navbar").innerHTML = (`
   <li class="button5"> <a href="#">WebDev</a>
   
     <ul class="options5">
-      <li class=""> <a href="thisWebsite.html" target="_blank">This Website</a> </li>
+      <li class=""> <a href="thisWebsite.html">This Website</a> </li>
     </ul>
   
   </li>
@@ -31,7 +31,11 @@ document.getElementById("navbar").innerHTML = (`
     <li class=""> <a href="contactForm.html">Contact form</a> </li>
     <li class=""> <a href="#">Social Media</a> </li>
     <li class=""> <a href="#">Get in touch</a> </li>
-  </ul></li></div> `)
+  </ul></li></div>
+
+
+
+ `)
 
 
   //run menu JS after previous JS has loaded in to build the menu
@@ -68,3 +72,8 @@ $(window).bind("load", function () {
     $('.options5').slideToggle(200);
   })
 });
+
+
+
+
+
