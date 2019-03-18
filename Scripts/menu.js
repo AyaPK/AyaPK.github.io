@@ -15,7 +15,7 @@ document.getElementById("navbar").innerHTML = (`
   <li class="button5"> <a href="#">WebDev</a>
   
     <ul class="options5">
-      <li class=""> <a href="luciusDraws.html" target="_blank">Lucius Draws</a> </li>
+      <li class=""> <a href="thisWebsite.html" target="_blank">This Website</a> </li>
     </ul>
   
   </li>
