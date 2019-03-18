@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bingo player</title>
+    <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="Styles/bingo/stylesheet.css" type="text/css">
+    <body>
+      <ul id="navbar"></ul>
+
+      <p>A simple Javascript bingo game.
+        <br> Generate a card to begin the game, pull numbers to try and fill up your card. <br>
+        Press the Check Match button to see if any of the numbers match your card, and call for a BINGO! when you fill a line.
+      </p>
+
+  <button onclick="generateCard()">GenerateCard</button>
+<table bordercolor="#ffffff">
+    <tr>
+  <td><p id="number1"></p></td>
+  <td><p id="number2"></p></td>
+  <td><p id="number3"></p></td>
+</tr><tr>
+  <td><p id="number4"></p></td>
+  <td><p id="number5"></p></td>
+  <td><p id="number6"></p></td>
+</tr><tr>
+  <td><p id="number7"></p></td>
+  <td><p id="number8"></p></td>
+  <td><p id="number9"></p></td>
+</tr>
+</table>
+  <script src="cardGenerate.js"></script>
+ 
+
+  <button onclick="test()">Pull number</button>
+  <p id="lastNumber"></p>
+  <p id="pulledNumbers"></p>
+
+<p id="bingoTest"></p>
+
+<button onclick="check()">Check for matches</button>
+
+<button onclick="bingoCheck()">BINGO!!</button>
+
+  <button onclick="reset()">Reset game</button>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="Scripts/menu.js"></script>
+  <script src="Scripts/bingo/cardGenerate.js"></script>
+  
+  </body>
+</html>
