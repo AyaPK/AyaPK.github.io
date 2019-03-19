@@ -11,18 +11,23 @@ var match6 = false
 var match7 = false
 var match8 = false
 var match9 = false
+var matchAmount = 0
+var numbersLeft = 99
 
 
 //generate a card
 function generateCard() {
 
    cardNumbers = []
+   var matchAmount = 0
+   var numbersLeft = 99
    pulledNumbers = []
    lastNumber = ""
    bingo = false
    document.getElementById("pulledNumbers").innerHTML = (pulledNumbers);
    document.getElementById("lastNumber").innerHTML = (lastNumber);
    document.getElementById("bingoTest").innerHTML = ("");
+   document.getElementById("matches").innerHTML = ("");
 
    function draw() {
       for (a = 1; a < 10; a++) {
@@ -58,13 +63,18 @@ function test() {
       pulledNumbers.sort(function (a, b) { return a - b })
       document.getElementById("lastNumber").innerHTML = ("And the number is... <b>" + lastNumber + "!!!</b>");
       document.getElementById("pulledNumbers").innerHTML = (pulledNumbers);
+      numbersLeft = numbersLeft - 1
+      var chance = (((9-matchAmount)/numbersLeft)*100)
+      document.getElementById("matches").innerHTML = ("You have a " + chance.toFixed(2) + "% chance to get a match on the next number!")
 
    } else {
       test()
-   }
+   } //end of number pull
+   // check for matches
    for (b = 0; b < pulledNumbers.length; b++) {
       if (pulledNumbers.includes(cardNumbers[b])) {
          cardNumbers[b] = ("<p style=\"background-color:lightgreen\"><s>" + cardNumbers[b] + "</s></p>")
+         matchAmount = matchAmount + 1
          document.getElementById("number1").innerHTML = (cardNumbers[0]);
          document.getElementById("number2").innerHTML = (cardNumbers[1]);
          document.getElementById("number3").innerHTML = (cardNumbers[2]);
@@ -74,36 +84,20 @@ function test() {
          document.getElementById("number7").innerHTML = (cardNumbers[6]);
          document.getElementById("number8").innerHTML = (cardNumbers[7]);
          document.getElementById("number9").innerHTML = (cardNumbers[8]);
+         
+      var chance = (((9-matchAmount)/numbersLeft)*100)
+         document.getElementById("matches").innerHTML = ("You have a " + chance.toFixed(2) + "% chance to get a match on the next number!")
       }
    }
+   //end of match checking
 
-}
-//end of number pull
+   //calculate chance
 
 
-//reset game
-function reset() {
-   cardNumbers = ["", "", "", "", "", "", "", "", ""]
-   pulledNumbers = [""]
-   lastNumber = [""]
-   bingo = false
-   document.getElementById("bingoTest").innerHTML = ("");
-   document.getElementById("number1").innerHTML = (cardNumbers[0]);
-   document.getElementById("number2").innerHTML = (cardNumbers[1]);
-   document.getElementById("number3").innerHTML = (cardNumbers[2]);
-   document.getElementById("number4").innerHTML = (cardNumbers[3]);
-   document.getElementById("number5").innerHTML = (cardNumbers[4]);
-   document.getElementById("number6").innerHTML = (cardNumbers[5]);
-   document.getElementById("number7").innerHTML = (cardNumbers[6]);
-   document.getElementById("number8").innerHTML = (cardNumbers[7]);
-   document.getElementById("number9").innerHTML = (cardNumbers[8]);
-   document.getElementById("pulledNumbers").innerHTML = (cardNumbers[1]);
-   document.getElementById("lastNumber").innerHTML = (lastNumber);
-}
-//end of reset
 
-//check for bingo
-function bingoCheck() {
+   //end of calculating
+
+   //check for bingo
    num1 = cardNumbers[0]
 
    if (/<s>/.test(cardNumbers[0])) { match1 = true } else { match1 = false }
@@ -145,8 +139,35 @@ function bingoCheck() {
       document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON A DIAGONAL!!!</b>");
    } else {
       bingo = false
-      document.getElementById("bingoTest").innerHTML = ("No bingo found...?");
    }
-
+   //end of Bingo check
 }
-//end of Bingo check
+
+
+
+//reset game
+function reset() {
+   cardNumbers = ["", "", "", "", "", "", "", "", ""]
+   pulledNumbers = [""]
+   lastNumber = [""]
+   bingo = false
+   var matchAmount = 0
+   var numbersLeft = 99
+   document.getElementById("bingoTest").innerHTML = ("");
+   document.getElementById("number1").innerHTML = (cardNumbers[0]);
+   document.getElementById("number2").innerHTML = (cardNumbers[1]);
+   document.getElementById("number3").innerHTML = (cardNumbers[2]);
+   document.getElementById("number4").innerHTML = (cardNumbers[3]);
+   document.getElementById("number5").innerHTML = (cardNumbers[4]);
+   document.getElementById("number6").innerHTML = (cardNumbers[5]);
+   document.getElementById("number7").innerHTML = (cardNumbers[6]);
+   document.getElementById("number8").innerHTML = (cardNumbers[7]);
+   document.getElementById("number9").innerHTML = (cardNumbers[8]);
+   document.getElementById("pulledNumbers").innerHTML = (cardNumbers[1]);
+   document.getElementById("lastNumber").innerHTML = (lastNumber);
+   document.getElementById("matches").innerHTML = ("");
+}
+//end of reset
+
+
+
