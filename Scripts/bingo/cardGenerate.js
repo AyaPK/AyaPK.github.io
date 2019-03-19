@@ -123,28 +123,30 @@ function bingoCheck() {
 
    if (match1 && match2 && match3) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE TOP ROW!!!</b>");
    } else if (match4 && match5 && match6) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE MIDDLE ROW!!!</b>");
    } else if (match7 && match8 && match9) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE BOTTOM ROW!!!</b>");
    } else if (match1 && match4 && match7) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE LEFT COLUMN!!!</b>");
    } else if (match2 && match5 && match8) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE MIDDLE COLUMN!!!</b>");
    } else if (match3 && match6 && match9) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE RIGHT COLUMN!!!</b>");
    } else if (match1 && match5 && match9) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON A DIAGONAL!!!</b>");
    } else if (match3 && match5 && match7) {
       bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON A DIAGONAL!!!</b>");
    } else {
       bingo = false
-   }
-
-
-   if (bingo) {
-      document.getElementById("bingoTest").innerHTML = ("<b>BINGO!!!</b>");
-   } else {
       document.getElementById("bingoTest").innerHTML = ("No bingo found...?");
    }
 
