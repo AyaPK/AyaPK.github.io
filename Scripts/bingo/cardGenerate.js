@@ -143,8 +143,6 @@ function test() {
    //end of Bingo check
 }
 
-
-
 //reset game
 function reset() {
    cardNumbers = ["", "", "", "", "", "", "", "", ""]

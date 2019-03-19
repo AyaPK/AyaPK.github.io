@@ -16,13 +16,13 @@
     with their own working version of this 8ball.</p>
   </br>
   <p>Ask the 8ball a question!</p>
-  <input id="question" value="Ask a question">
+  <input id="question" value="Ask a question" onfocus="this.value=''">
   <button id="ask" type="submit" onclick="randomise()">Ask!</button>
   <p id="response"></p>
   <script src="scripts/8ball.js"></script>
   </br>
   <p>Provide your own answers!</p>
-  <input id="reply" value="Type your own answer!">
+  <input id="reply" value="Type your own answer!" onfocus="this.value=''">
   <button id="personalise" type="submit" onclick="ownReply()">Add answer</button>
   <p id="added"></p>
   </br>
