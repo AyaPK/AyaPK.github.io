@@ -121,7 +121,10 @@ function bingoCheck() {
    if (/<s>/.test(cardNumbers[7])) { match8 = true } else { match8 = false }
    if (/<s>/.test(cardNumbers[8])) { match9 = true } else { match9 = false }
 
-   if (match1 && match2 && match3) {
+   if (match1 && match2 && match3 && match4 && match5 && match6 && match7 && match8 && match9) {
+      bingo = true
+      document.getElementById("bingoTest").innerHTML = ("<b>You filled the whole card! Seems a bit excessive though...</b>")
+   } else if (match1 && match2 && match3) {
       bingo = true
       document.getElementById("bingoTest").innerHTML = ("<b>BINGO ON THE TOP ROW!!!</b>");
    } else if (match4 && match5 && match6) {
