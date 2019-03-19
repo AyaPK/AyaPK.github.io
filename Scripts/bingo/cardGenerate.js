@@ -62,12 +62,6 @@ function test() {
    } else {
       test()
    }
-}
-//end of number pull
-
-
-//check for matches
-function check() {
    for (b = 0; b < pulledNumbers.length; b++) {
       if (pulledNumbers.includes(cardNumbers[b])) {
          cardNumbers[b] = ("<p style=\"background-color:lightgreen\"><s>" + cardNumbers[b] + "</s></p>")
@@ -82,8 +76,9 @@ function check() {
          document.getElementById("number9").innerHTML = (cardNumbers[8]);
       }
    }
+
 }
-//end of match check
+//end of number pull
 
 
 //reset game
