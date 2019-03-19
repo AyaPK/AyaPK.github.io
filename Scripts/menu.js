@@ -12,14 +12,14 @@ document.getElementById("navbar").innerHTML = (`
   
   </li>
   
-  <li class="button5"> <a href="#">WebDev</a>
+ <!-- <li class="button5"> <a href="#">WebDev</a>
   
     <ul class="options5">
       <li class=""> <a href="thisWebsite.html">This Website</a> </li>
     </ul>
   
   </li>
-  
+  -->
   <li class="button3"> <a href="#">About me</a>
     <ul class="options3">
       <li class=""> <a href="#">Skillset</a> </li>
@@ -31,11 +31,7 @@ document.getElementById("navbar").innerHTML = (`
     <li class=""> <a href="contactForm.html">Contact form</a> </li>
     <li class=""> <a href="#">Social Media</a> </li>
     <li class=""> <a href="#">Get in touch</a> </li>
-  </ul></li></div>
-
-
-
- `)
+  </ul></li></div>`)
 
 
 //run menu JS after previous JS has loaded in to build the menu
