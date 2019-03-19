@@ -19,8 +19,8 @@ var numbersLeft = 99
 function generateCard() {
 
    cardNumbers = []
-   var matchAmount = 0
-   var numbersLeft = 99
+   matchAmount = 0
+   numbersLeft = 99
    pulledNumbers = []
    lastNumber = ""
    bingo = false
@@ -151,8 +151,8 @@ function reset() {
    pulledNumbers = [""]
    lastNumber = [""]
    bingo = false
-   var matchAmount = 0
-   var numbersLeft = 99
+   matchAmount = 0
+   numbersLeft = 99
    document.getElementById("bingoTest").innerHTML = ("");
    document.getElementById("number1").innerHTML = (cardNumbers[0]);
    document.getElementById("number2").innerHTML = (cardNumbers[1]);
