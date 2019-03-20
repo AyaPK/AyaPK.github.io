@@ -64,8 +64,6 @@ function test() {
       document.getElementById("lastNumber").innerHTML = ("And the number is... <b>" + lastNumber + "!!!</b>");
       document.getElementById("pulledNumbers").innerHTML = (pulledNumbers);
       numbersLeft = numbersLeft - 1
-      var chance = (((9-matchAmount)/numbersLeft)*100)
-      document.getElementById("matches").innerHTML = ("You have a " + chance.toFixed(2) + "% chance to get a match on the next number!")
 
    } else {
       test()
@@ -85,15 +83,15 @@ function test() {
          document.getElementById("number8").innerHTML = (cardNumbers[7]);
          document.getElementById("number9").innerHTML = (cardNumbers[8]);
          
-      var chance = (((9-matchAmount)/numbersLeft)*100)
-         document.getElementById("matches").innerHTML = ("You have a " + chance.toFixed(2) + "% chance to get a match on the next number!")
+      
       }
    }
    //end of match checking
 
    //calculate chance
 
-
+   var chance = (((9-matchAmount)/numbersLeft)*100)
+   document.getElementById("matches").innerHTML = ("You have a " + chance.toFixed(2) + "% chance to get a match on the next number!")
 
    //end of calculating
 
