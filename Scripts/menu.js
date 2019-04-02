@@ -17,7 +17,7 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
 
   <ul class="options6">
     <li class=""> <a href="*">Python Practice Scripts</a> </li>
-    <li class=""> <a href="*">TKinter</a> </li>
+    <li class=""> <a href="tkinter.html">TKinter</a> </li>
   </ul>
 
 </li>

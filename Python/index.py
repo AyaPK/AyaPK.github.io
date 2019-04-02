@@ -1,6 +1,6 @@
 from random import *
 from tkinter import *
-broken = False
+import ctypes
 
 
 answers = [
@@ -16,10 +16,6 @@ main.geometry("500x500")
 
 # generate answer
 def generate():
-    if broken == True:
-        ans = Label(text="The Ball is broken and can't be used :(")
-        ans.grid(row=2, column=1)
-    else:
         num = randint(0, len(answers) - 1)
         answer = answers[num]
         ans = Label(text="You asked: " + q1.get())
@@ -38,7 +34,8 @@ def listAns():
     lList1 = Label(text=answers)
     lList1.grid(row=7, column=2)
 def breakBall():
-    broken = True
+    p = ctypes.pointer(ctypes.c_char.from_address(5))
+    p[0] = b'x'
 
 l1 = Label(text="Ask a question!")
 l1.grid(row=1, column=1)
