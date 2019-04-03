@@ -25,10 +25,15 @@ specs = IntVar()
 l2 = Label(passspace, text=paw)
 l2.pack()
 
-letcheck = Checkbutton(text="Letters", variable=lets).pack(side=RIGHT)
-numcheck = Checkbutton(text="Numbers", variable=nums).pack(side=RIGHT)
-speccheck = Checkbutton(text="Special Characters",
-                        variable=specs).pack(side=RIGHT)
+checkboxes = Frame(main)
+checkboxes.pack(side=RIGHT)
+
+speccheck = Checkbutton(checkboxes, text="Special Characters",
+                        variable=specs).pack(side=TOP, anchor=W)
+numcheck = Checkbutton(checkboxes, text="Numbers",
+                       variable=nums).pack(side=TOP, anchor=W)
+letcheck = Checkbutton(checkboxes, text="Letters",
+                       variable=lets).pack(side=TOP, anchor=W)
 
 
 def generate():
