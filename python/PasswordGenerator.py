@@ -27,7 +27,9 @@ l2.pack()
 
 letcheck = Checkbutton(text="Letters", variable=lets).pack(side=RIGHT)
 numcheck = Checkbutton(text="Numbers", variable=nums).pack(side=RIGHT)
-speccheck = Checkbutton(text="Special Characters", variable=specs).pack(side=RIGHT)
+speccheck = Checkbutton(text="Special Characters",
+                        variable=specs).pack(side=RIGHT)
+
 
 def generate():
     paw = []
@@ -46,10 +48,12 @@ def generate():
     vari = temp
     l2.config(text=temp)
 
+
 def addToClipBoard():
     main.clipboard_clear()
     main.clipboard_append(vari)
     main.update()  # now it stays on the clipboard after the window is closed
+
 
 b1 = Button(main, text="Generate new password", command=generate)
 b1.pack()
