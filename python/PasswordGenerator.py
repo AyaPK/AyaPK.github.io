@@ -35,21 +35,25 @@ numcheck = Checkbutton(checkboxes, text="Numbers",
 letcheck = Checkbutton(checkboxes, text="Letters",
                        variable=lets).pack(side=TOP, anchor=W)
 
+
 def generate():
     paw = []
-    for x in range(0, pwlen.get()):
-        newchar = ""
-        while newchar == "":
-            rand = random.randint(0,2)
-            if lets.get() == 1 and rand == 0:
-                newchar = random.choice(string.ascii_letters)
-                paw.append(newchar)
-            if nums.get() == 1 and rand == 1:
-                newchar = random.choice(string.digits)
-                paw.append(newchar)
-            if specs.get() == 1 and rand == 2:
-                newchar = random.choice(string.punctuation)
-                paw.append(newchar)
+    if lets.get() == 0 and nums.get() == 0 and specs.get() == 0:
+        paw.append("Please choose at least one password option")
+    else:
+        for x in range(0, pwlen.get()):
+            newchar = ""
+            while newchar == "":
+                rand = random.randint(0, 2)
+                if lets.get() == 1 and rand == 0:
+                    newchar = random.choice(string.ascii_letters)
+                    paw.append(newchar)
+                if nums.get() == 1 and rand == 1:
+                    newchar = random.choice(string.digits)
+                    paw.append(newchar)
+                if specs.get() == 1 and rand == 2:
+                    newchar = random.choice(string.punctuation)
+                    paw.append(newchar)
 
     temp = ''.join(paw)
     global vari
