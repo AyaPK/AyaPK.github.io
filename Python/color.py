@@ -46,17 +46,17 @@ def changergb():
     entry.delete(0, END)
     hexa = ""
     if len(hex(int(r1.get()))[2:]) == 2:
-        hexa = (str(hexa) + hex(int(r1.get()))[2:])
+        hexa = str(hexa) + hex(int(r1.get()))[2:]
     else:
-        hexa = (str(hexa) + "0" + hex(int(r1.get()))[2:])
+        hexa = str(hexa) + "0" + hex(int(r1.get()))[2:]
     if len(hex(int(g1.get()))[2:]) == 2:
-        hexa = (str(hexa) + hex(int(g1.get()))[2:])
+        hexa = str(hexa) + hex(int(g1.get()))[2:]
     else:
-        hexa = (str(hexa) + "0" + hex(int(g1.get()))[2:])
+        hexa = str(hexa) + "0" + hex(int(g1.get()))[2:]
     if len(hex(int(b1.get()))[2:]) == 2:
-        hexa = (str(hexa) + hex(int(b1.get()))[2:])
+        hexa = str(hexa) + hex(int(b1.get()))[2:]
     else:
-        hexa = (str(hexa) + "0" + hex(int(b1.get()))[2:])
+        hexa = str(hexa) + "0" + hex(int(b1.get()))[2:]
     output.config(bg="#" + str(hexa))
     entry.insert(END, "#" + str(hexa))
 
