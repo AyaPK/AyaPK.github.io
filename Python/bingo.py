@@ -17,6 +17,8 @@ bingo7 = FALSE
 bingo8 = FALSE
 bingo9 = FALSE
 bgcolor = "#f0f0ed"
+bingos = 0
+matches = 0
 
 
 ### frames construction ###
@@ -38,7 +40,7 @@ lastres.grid(row=1, column=6, sticky=W)
 drawntext.grid(row=3, column=5, sticky=E)
 drawnres.grid(row=3, column=6)
 matchtext.grid(row=2, column=5, sticky=E)
-matchchance.grid(row=2, column=6)
+matchchance.grid(row=2, column=6, sticky=W)
 drawbutton.grid(row=5, column=2)
 bingotext.grid(row=4, column=3, columnspan=4, rowspan=2)
 #########################
@@ -51,10 +53,10 @@ drawnnums = Label(drawntext, text="The drawn numbers are: ", justify=RIGHT)
 drawnlist = Text(drawnres, height=6, width=50, font=("monotype", 5))
 matchlab = Label(
     matchtext,
-    text="The chance of pulling a match on the next draw are: ",
+    text="The chance of pulling a match on the next draw is: ",
     justify=RIGHT,
 )
-matchperc = Label(matchchance)
+matchperc = Label(matchchance, justify=LEFT)
 draw = Button(drawbutton, text="Draw a number")
 success = Label(bingotext, font=("Helvetica", 40))
 make.grid()
@@ -62,8 +64,8 @@ lastdraw.grid()
 lastnum.grid()
 drawnnums.grid()
 drawnlist.grid()
-# matchlab.grid()
-# matchperc.grid()
+matchlab.grid()
+matchperc.grid()
 draw.grid()
 success.grid()
 ###################
@@ -107,13 +109,38 @@ numarray = []
 
 
 def makecard():
+    global bingos
     global bingo
+    global bingo1
+    global bingo2
+    global bingo3
+    global bingo4
+    global bingo5
+    global bingo6
+    global bingo7
+    global bingo8
+    global bingo9
     global numarray
     global drawnlist
     global drawnnumbers
+    global success
+    global matches
     global lastnum
+    bingo1 = FALSE
+    bingo2 = FALSE
+    bingo3 = FALSE
+    bingo4 = FALSE
+    bingo5 = FALSE
+    bingo6 = FALSE
+    bingo7 = FALSE
+    bingo8 = FALSE
+    bingo9 = FALSE
     root.config(bg="#f0f0ed")
+    bingos = 0
+    success.config(text="")
+    bingo = FALSE
     numarray = []
+    matches = 0
     drawnnumbers = []
     drawnlist.delete(1.0, END)
     for x in range(0, 9):
@@ -165,6 +192,17 @@ def drawnumber():
     global bingo
     global lastnum
     global bgcolor
+    global bingos
+    global matches
+    global match1
+    global match2
+    global match3
+    global match4
+    global match5
+    global match6
+    global match7
+    global match8
+    global match9
     drawnum = ""
     if len(drawnnumbers) != 100:
         while drawnum == "":
@@ -175,34 +213,47 @@ def drawnumber():
                 lastnum.config(text=drawnew)
                 lastnum.grid()
                 drawnlist.insert(END, str(drawnew) + " ")
-        check = numarray.index(drawnew)
+                matches = matches+1
+        try:
+            check = numarray.index(drawnew)
+        except:
+            check = "nothing"
         if check == 0:
             bingo1 = TRUE
             num1.config(bg="green")
+            bingos = bingos+1
         if check == 1:
             bingo2 = TRUE
             num2.config(bg="green")
+            bingos = bingos + 1
         if check == 2:
             bingo3 = TRUE
             num3.config(bg="green")
+            bingos = bingos + 1
         if check == 3:
             bingo4 = TRUE
             num4.config(bg="green")
+            bingos = bingos + 1
         if check == 4:
             bingo5 = TRUE
             num5.config(bg="green")
+            bingos = bingos + 1
         if check == 5:
             bingo6 = TRUE
             num6.config(bg="green")
+            bingos = bingos + 1
         if check == 6:
             bingo7 = TRUE
             num7.config(bg="green")
+            bingos = bingos + 1
         if check == 7:
             bingo8 = TRUE
             num8.config(bg="green")
+            bingos = bingos + 1
         if check == 8:
             bingo9 = TRUE
             num9.config(bg="green")
+            bingos = bingos + 1
     else:
         lastnum.config(text="There are no numbers left!!")
     if bingo1 and bingo2 and bingo3:
@@ -225,6 +276,8 @@ def drawnumber():
         global bgcolor
         root.config(bg="green")
         success.config(text="BINGO!")
+    chance = float(((9-bingos)/(100-matches))*100)
+    matchperc.config(text=str(round(chance, 2))+"%")
 
 
 draw.config(command=drawnumber)
