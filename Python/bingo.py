@@ -20,7 +20,6 @@ bgcolor = "#f0f0ed"
 bingos = 0
 matches = 0
 
-
 ### frames construction ###
 maingrid = Frame(root, bg="black")
 makebutton = Frame(root, bg=bgcolor)
@@ -174,7 +173,6 @@ def makecard():
 ##################
 make.config(command=makecard)
 
-
 ## Generate number ##
 drawnnumbers = []
 
@@ -213,7 +211,7 @@ def drawnumber():
                 lastnum.config(text=drawnew)
                 lastnum.grid()
                 drawnlist.insert(END, str(drawnew) + " ")
-                matches = matches+1
+                matches = matches + 1
         try:
             check = numarray.index(drawnew)
         except:
@@ -221,7 +219,7 @@ def drawnumber():
         if check == 0:
             bingo1 = TRUE
             num1.config(bg="green")
-            bingos = bingos+1
+            bingos = bingos + 1
         if check == 1:
             bingo2 = TRUE
             num2.config(bg="green")
@@ -276,8 +274,8 @@ def drawnumber():
         global bgcolor
         root.config(bg="green")
         success.config(text="BINGO!")
-    chance = float(((9-bingos)/(100-matches))*100)
-    matchperc.config(text=str(round(chance, 2))+"%")
+    chance = float(((9 - bingos) / (100 - matches)) * 100)
+    matchperc.config(text=str(round(chance, 2)) + "%")
 
 
 draw.config(command=drawnumber)
