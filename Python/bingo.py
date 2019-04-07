@@ -49,7 +49,11 @@ lastdraw = Label(lasttext, text="You drew: ", justify=RIGHT)
 lastnum = Label(lastres)
 drawnnums = Label(drawntext, text="The drawn numbers are: ", justify=RIGHT)
 drawnlist = Text(drawnres, height=6, width=50, font=("monotype", 5))
-matchlab = Label(matchtext, text="The chance of pulling a match on the next draw are: ", justify=RIGHT)
+matchlab = Label(
+    matchtext,
+    text="The chance of pulling a match on the next draw are: ",
+    justify=RIGHT,
+)
 matchperc = Label(matchchance)
 draw = Button(drawbutton, text="Draw a number")
 success = Label(bingotext, font=("Helvetica", 40))
@@ -58,8 +62,8 @@ lastdraw.grid()
 lastnum.grid()
 drawnnums.grid()
 drawnlist.grid()
-#matchlab.grid()
-#matchperc.grid()
+# matchlab.grid()
+# matchperc.grid()
 draw.grid()
 success.grid()
 ###################
@@ -100,6 +104,8 @@ num8 = Label(space8)
 num9 = Label(space9)
 
 numarray = []
+
+
 def makecard():
     global bingo
     global numarray
@@ -110,10 +116,10 @@ def makecard():
     numarray = []
     drawnnumbers = []
     drawnlist.delete(1.0, END)
-    for x in range(0,9):
+    for x in range(0, 9):
         num = ""
         while num == "":
-            newnum = randint(0,99)
+            newnum = randint(0, 99)
             if newnum not in numarray:
                 num = newnum
                 numarray.append(num)
@@ -136,12 +142,16 @@ def makecard():
     num7.grid()
     num8.grid()
     num9.grid()
+
+
 ##################
 make.config(command=makecard)
 
 
 ## Generate number ##
 drawnnumbers = []
+
+
 def drawnumber():
     global bingo1
     global bingo2
@@ -158,13 +168,13 @@ def drawnumber():
     drawnum = ""
     if len(drawnnumbers) != 100:
         while drawnum == "":
-            drawnew = randint(0,99)
+            drawnew = randint(0, 99)
             if drawnew not in drawnnumbers:
                 drawnum = drawnew
                 drawnnumbers.append(drawnew)
                 lastnum.config(text=drawnew)
                 lastnum.grid()
-                drawnlist.insert(END, str(drawnew)+" ")
+                drawnlist.insert(END, str(drawnew) + " ")
         check = numarray.index(drawnew)
         if check == 0:
             bingo1 = TRUE
@@ -216,9 +226,9 @@ def drawnumber():
         root.config(bg="green")
         success.config(text="BINGO!")
 
+
 draw.config(command=drawnumber)
 #####################
-
 
 
 root.mainloop()
