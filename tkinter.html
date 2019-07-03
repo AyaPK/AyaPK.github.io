@@ -566,67 +566,53 @@ root.mainloop()
 from tkinter import *
 
 root = Tk()
-root.title("Aya's colour code converter")
-
-leftside = Frame(root)
-leftside.pack(side=LEFT)
-
-rightside = Frame(root)
-rightside.pack(side=RIGHT)
-
-entry = Entry(leftside)
-entry.pack()
-button = Button(leftside, text="convert hex to RGB")
-button.pack()
-r1 = Entry(leftside, bg="#ff7b60")
-g1 = Entry(leftside, bg="#60ff67")
-b1 = Entry(leftside, bg="#6a60ff")
-b1.pack(side=BOTTOM)
-g1.pack(side=BOTTOM)
-r1.pack(side=BOTTOM)
-button2 = Button(leftside, text="convert RGB to hex")
-button2.pack(side=BOTTOM)
-output = Text(rightside, height=8, width=5)
-output.pack(side=RIGHT)
-
-
-def changecolor():
-    if entry.get()[0:] != "#" and len(entry.get()) == 6:
-        entry.insert(0, "#")
-    global output
-    color = entry.get()
-    r1.delete(0, END)
-    g1.delete(0, END)
-    b1.delete(0, END)
-    output.config(bg=color)
-    r1.insert(END, int(color[1:-4], 16))
-    g1.insert(END, int(color[3:-2], 16))
-    b1.insert(END, int(color[5:], 16))
+root.title("Number to hex string converter")
+topleft = Frame(root)
+bottomleft = Frame(root)
+topmiddle = Frame(root)
+bottommiddle = Frame(root)
+topright = Frame(root)
+button = Frame(root)
+cop = Frame(root)
+topleft.grid(row=1, column=1)
+bottomleft.grid(row=2, column=1)
+topmiddle.grid(row=1, column=2)
+bottommiddle.grid(row=2, column=2)
+topright.grid(row=1, column=3, rowspan=5)
+button.grid(row=3, column=1)
+cop.grid(row=3, column=2)
+fromtext = Label(topleft, text="from")
+totext = Label(bottomleft, text="to")
+fromnum = Entry(topmiddle)
+tonum = Entry(bottommiddle)
+output = Text(topright, height=5, width=10)
+run = Button(button, text="Run")
+copy = Button(cop, text="Copy to clipboard")
+fromtext.grid()
+totext.grid()
+fromnum.grid()
+tonum.grid()
+output.grid()
+run.grid()
+copy.grid()
 
 
-button.config(command=changecolor)
+######### main formula #########
+def formulate():
+output.delete(1.0, END)
+for x in range(int(fromnum.get()), int(tonum.get())+1):
+    output.insert(END, str(x)+": "+str(hex(x))+"\n")
 
 
-def changergb():
-    entry.delete(0, END)
-    hexa = ""
-    if len(hex(int(r1.get()))[2:]) == 2:
-        hexa = str(hexa) + hex(int(r1.get()))[2:]
-    else:
-        hexa = str(hexa) + "0" + hex(int(r1.get()))[2:]
-    if len(hex(int(g1.get()))[2:]) == 2:
-        hexa = str(hexa) + hex(int(g1.get()))[2:]
-    else:
-        hexa = str(hexa) + "0" + hex(int(g1.get()))[2:]
-    if len(hex(int(b1.get()))[2:]) == 2:
-        hexa = str(hexa) + hex(int(b1.get()))[2:]
-    else:
-        hexa = str(hexa) + "0" + hex(int(b1.get()))[2:]
-    output.config(bg="#" + str(hexa))
-    entry.insert(END, "#" + str(hexa))
+def copycode():
+root.clipboard_clear()
+root.clipboard_append(output.get(1.0, END))
+root.update()
 
 
-button2.config(command=changergb)
+run.config(command=formulate)
+copy.config(command=copycode)
+
 
 root.mainloop()
 
