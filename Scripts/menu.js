@@ -28,7 +28,8 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
 
   <ul class="options5">
     <li class=""> <a href="http://twitter.com/GeneratorArt">Album Art Generator</a> </li>
-    <li class=""> <a href="http://twitter.com/TheUSOFficeBot">The US Office Bot</a> </li>
+    <li class=""> <a href="http://twitter.com/TheUSOfficeBot">The US Office Bot</a> </li>
+    <li class=""> <a href="http://twitter.com/PokeFusionsBot">Pokémonstrosities</a> </li>
   </ul>
 
 </li>
