@@ -8,6 +8,7 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
     <li class=""> <a href="passwordTester.html">Password Validator</a> </li>
     <li class=""> <a href="bingoCard.html">Javascript Bingo Game</a> </li>
     <li class=""> <a href="8ball.html">8ball</a> </li>
+    <li class=""> <a href="lance.html">Lance</a> </li>
   </ul>
 </li>
 
@@ -48,7 +49,8 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
   <li class=""> <a href="contactForm.html">Contact form</a> </li>
   <li class=""> <a href="#">Social Media</a> </li>
   <li class=""> <a href="#">Get in touch</a> </li>
-</ul></li></div>`)
+</ul></li></div>
+`)
 
 
 //run menu JS after previous JS has loaded in to build the menu
