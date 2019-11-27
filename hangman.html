@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>AyaPK</title>
+  <link rel="stylesheet" href="Styles/stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <ul id="navbar"></ul>
+
+  <div style="text-align: left;">
+    <h1>Hangman</h1>
+    <div></div><button id="newgame">Start new game <br></button></div>
+    <img id="hangimage" src="https://www.paulneve.com/pp/hangman10.jpg" />
+    <div id="placeholder" style="font-size: 1.5em; font-family: monotype; color: red;">-------</div>
+    <div id="gamestatus">GAME NOT RUNNING</div>
+    <input id="guessinput" type="text" size="1" maxlength="1" />
+    <button id="button">(game not running!)</button>
+    <br/>
+    <div>Guessed Letters</div>
+    <div id="guessedletters">(guessed letters will go here)</div>
+</div>
+
+<div>
+    <p>
+       <i> Based on a coursework excersise given by my Lecturer. </i>
+    </p>
+    <a href="Scripts/hangman/js.js">Source Code</a>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="Scripts/menu.js"></script>
+  <script src="Scripts/hangman/js.js"></script>
+</body>
+
+</html>
