@@ -23,12 +23,16 @@ function newgame(){
 
 //A function to run every time the guess letter button is pressed
 function guessletter(){
+
     //Makes sure the game is running and that a letter is typed
     if(gamerunning && document.getElementById("guessinput").value.length != 0){
+
     //Define letter based on input
     var letter = document.getElementById("guessinput").value[0];
+
     //check to see if the letter is in the answer
     if(answer.indexOf(letter) != -1) {
+
         //Modifies the placeholder display to show the newly found letter
         for(x = 0; x <= answer.length; x++){
             if(answer[x] == letter){
@@ -37,16 +41,19 @@ function guessletter(){
             }
         }
     } else {
+
         //Updates the guess counts to reflect an incorrect choice
         guesscount--;
         document.getElementById("hangimage").src = "Images/hangman/hangman"+guesscount+".jpg";
 
     }
+
     //Updates the guessed letter display if it isn't currently there
     if(guessedletters.indexOf(letter) == -1){
         guessedletters = guessedletters+" "+letter;
         document.getElementById("guessedletters").innerHTML = guessedletters;
     }
+
     //Checks to see if the game is over
     if(answerdisp.indexOf("-") == -1){
         document.getElementById("hangimage").src = "Images/hangman/hangman_win.jpg";
@@ -56,6 +63,7 @@ function guessletter(){
         document.getElementById("gamestatus").innerHTML = "The game is over. You lost :( <br> The correct answer was <b>"+answer+"</b>";
         gamerunning = false;
     }
+
     //Empties the value box
     document.getElementById("guessinput").value = "";
     }
