@@ -15,7 +15,7 @@ function newgame(){
     answerdisp = "-".repeat(answer.length);
     guessedletters = "";
     guesscount = 10;
-    document.getElementById("hangimage").src = "images/hangman/hangman10.jpg";
+    document.getElementById("hangimage").src = "Images/hangman/hangman10.jpg";
     document.getElementById("placeholder").innerHTML = answerdisp;
     document.getElementById("gamestatus").innerHTML = "Game is running, try guessing letters!";
     gamerunning = true;
@@ -39,7 +39,7 @@ function guessletter(){
     } else {
         //Updates the guess counts to reflect an incorrect choice
         guesscount--;
-        document.getElementById("hangimage").src = "images/hangman/hangman"+guesscount+".jpg";
+        document.getElementById("hangimage").src = "Images/hangman/hangman"+guesscount+".jpg";
 
     }
     //Updates the guessed letter display if it isn't currently there
@@ -49,7 +49,7 @@ function guessletter(){
     }
     //Checks to see if the game is over
     if(answerdisp.indexOf("-") == -1){
-        document.getElementById("hangimage").src = "images/hangman/hangman_win.jpg";
+        document.getElementById("hangimage").src = "Images/hangman/hangman_win.jpg";
         document.getElementById("gamestatus").innerHTML = "The game is over. YOU WON!!";
         gamerunning = false;
     } else if(guesscount == 0){
