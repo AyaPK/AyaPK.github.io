@@ -28,7 +28,7 @@ function guessletter(){
     if(gamerunning && document.getElementById("guessinput").value.length != 0){
 
     //Define letter based on input
-    var letter = document.getElementById("guessinput").value[0];
+    var letter = document.getElementById("guessinput").value[0].toLowerCase();
 
     //check to see if the letter is in the answer
     if(answer.indexOf(letter) != -1) {
