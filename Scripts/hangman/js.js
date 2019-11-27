@@ -17,6 +17,7 @@ function newgame(){
     guesscount = 10;
     document.getElementById("hangimage").src = "Images/hangman/hangman10.jpg";
     document.getElementById("placeholder").innerHTML = answerdisp;
+    document.getElementById("guessedletters").innerHTML = guessedletters;
     document.getElementById("gamestatus").innerHTML = "Game is running, try guessing letters!";
     gamerunning = true;
 }
