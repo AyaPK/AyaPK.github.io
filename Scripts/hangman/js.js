@@ -53,7 +53,7 @@ function guessletter(){
         document.getElementById("gamestatus").innerHTML = "The game is over. YOU WON!!";
         gamerunning = false;
     } else if(guesscount == 0){
-        document.getElementById("gamestatus").innerHTML = "The game is over. You lost :(";
+        document.getElementById("gamestatus").innerHTML = "The game is over. You lost :( <br> The correct answer was <b>"+answer+"</b>";
         gamerunning = false;
     }
     //Empties the value box
