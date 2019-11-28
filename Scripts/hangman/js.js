@@ -8,9 +8,9 @@ var guessedletters = "";
 var gamerunning = false
 
 //Function to choose a new word from the array of possible words and return displays to default
-function newgame(){
+function newgame() {
     document.getElementById("button").innerHTML = "Guess Letter";
-    rand = Math.floor(Math.random()*possiblewords.length);
+    rand = Math.floor(Math.random() * possiblewords.length);
     answer = possiblewords[rand];
     answerdisp = "-".repeat(answer.length);
     guessedletters = "";
@@ -23,50 +23,50 @@ function newgame(){
 }
 
 //A function to run every time the guess letter button is pressed
-function guessletter(){
+function guessletter() {
 
     //Makes sure the game is running and that a letter is typed
-    if(gamerunning && document.getElementById("guessinput").value.length != 0){
+    if (gamerunning && document.getElementById("guessinput").value.length != 0) {
 
-    //Define letter based on input
-    var letter = document.getElementById("guessinput").value[0].toLowerCase();
+        //Define letter based on input
+        var letter = document.getElementById("guessinput").value[0].toLowerCase();
 
-    //check to see if the letter is in the answer
-    if(answer.indexOf(letter) != -1) {
+        //check to see if the letter is in the answer
+        if (answer.indexOf(letter) != -1) {
 
-        //Modifies the placeholder display to show the newly found letter
-        for(x = 0; x <= answer.length; x++){
-            if(answer[x] == letter){
-                answerdisp = answerdisp.substr(0,x)+letter+answerdisp.substr(x+1, answerdisp.length);
-                document.getElementById("placeholder").innerHTML = answerdisp;
+            //Modifies the placeholder display to show the newly found letter
+            for (x = 0; x <= answer.length; x++) {
+                if (answer[x] == letter) {
+                    answerdisp = answerdisp.substr(0, x) + letter + answerdisp.substr(x + 1, answerdisp.length);
+                    document.getElementById("placeholder").innerHTML = answerdisp;
+                }
             }
+        } else {
+
+            //Updates the guess counts to reflect an incorrect choice
+            guesscount--;
+            document.getElementById("hangimage").src = "Images/hangman/hangman" + guesscount + ".jpg";
+
         }
-    } else {
 
-        //Updates the guess counts to reflect an incorrect choice
-        guesscount--;
-        document.getElementById("hangimage").src = "Images/hangman/hangman"+guesscount+".jpg";
+        //Updates the guessed letter display if it isn't currently there
+        if (guessedletters.indexOf(letter) == -1) {
+            guessedletters = guessedletters + " " + letter;
+            document.getElementById("guessedletters").innerHTML = guessedletters;
+        }
 
-    }
+        //Checks to see if the game is over
+        if (answerdisp.indexOf("-") == -1) {
+            document.getElementById("hangimage").src = "Images/hangman/hangman_win.jpg";
+            document.getElementById("gamestatus").innerHTML = "The game is over. YOU WON!!";
+            gamerunning = false;
+        } else if (guesscount == 0) {
+            document.getElementById("gamestatus").innerHTML = "The game is over. You lost :( <br> The correct answer was <b>" + answer + "</b>";
+            gamerunning = false;
+        }
 
-    //Updates the guessed letter display if it isn't currently there
-    if(guessedletters.indexOf(letter) == -1){
-        guessedletters = guessedletters+" "+letter;
-        document.getElementById("guessedletters").innerHTML = guessedletters;
-    }
-
-    //Checks to see if the game is over
-    if(answerdisp.indexOf("-") == -1){
-        document.getElementById("hangimage").src = "Images/hangman/hangman_win.jpg";
-        document.getElementById("gamestatus").innerHTML = "The game is over. YOU WON!!";
-        gamerunning = false;
-    } else if(guesscount == 0){
-        document.getElementById("gamestatus").innerHTML = "The game is over. You lost :( <br> The correct answer was <b>"+answer+"</b>";
-        gamerunning = false;
-    }
-
-    //Empties the value box
-    document.getElementById("guessinput").value = "";
+        //Empties the value box
+        document.getElementById("guessinput").value = "";
     }
 }
 

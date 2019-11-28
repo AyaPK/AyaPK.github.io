@@ -1,6 +1,6 @@
 
 document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a href="index.html">Home</a> </li>
-<li class="button2"> <a href="#">Javascript Projects</a>
+<li class="button2"> <a href="#">Javascript</a>
 
   <ul class="options2">
       <!-- <li class=""> <a href="dndGenerator.html">DnD Character Sheet</a> </li> -->
