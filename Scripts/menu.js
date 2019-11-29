@@ -8,7 +8,6 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
     <li class=""> <a href="passwordTester.html">Password Validator</a> </li>
     <li class=""> <a href="bingoCard.html">Javascript Bingo Game</a> </li>
     <li class=""> <a href="8ball.html">8ball</a> </li>
-    <li class=""> <a href="lance.html">Lance</a> </li>
     <li class=""> <a href="hangman.html">Hangman</a> </li>
     <li class=""> <a href="imagegallery.html">Image Viewer</a> </li>
   </ul>
