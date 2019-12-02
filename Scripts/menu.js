@@ -1,16 +1,17 @@
 
-document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a href="index.html">Home</a> </li>
+document.getElementById("navbar").innerHTML = (`<div>
+<li class="button1"> <a href="index.html">Home</a> </li>
 <li class="button2"> <a href="#">Javascript</a>
 
   <ul class="options2">
-      <!-- <li class=""> <a href="dndGenerator.html">DnD Character Sheet</a> </li> -->
-      <li class=""> <a href="fizzbuzz.html">FizzBuzz Generator</a> </li>
-      <li class=""> <a href="passwordTester.html">Password Validator</a> </li>
-      <li class=""> <a href="bingoCard.html">Javascript Bingo Game</a> </li>
-      <li class=""> <a href="8ball.html">8ball</a> </li>
-      <li class=""> <a href="paul.html">Paul</a> </li>
-      <li class=""> <a href="hangman.html">Hangman</a> </li>
-      <li class=""> <a href="imagegallery.html">Image Viewer</a> </li>
+    <!-- <li class=""> <a href="dndGenerator.html">DnD Character Sheet</a> </li> -->
+    <li class=""> <a href="fizzbuzz.html">FizzBuzz Generator</a> </li>
+    <li class=""> <a href="passwordTester.html">Password Validator</a> </li>
+    <li class=""> <a href="bingoCard.html">Javascript Bingo Game</a> </li>
+    <li class=""> <a href="8ball.html">8ball</a> </li>
+    <li class=""> <a href="paul.html">Paul</a> </li>
+    <li class=""> <a href="hangman.html">Hangman</a> </li>
+    <li class=""> <a href="imagegallery.html">Image Viewer</a> </li>
   </ul>
 </li>
 
@@ -38,8 +39,9 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
 </li>
 
 <li class="button4"> <a href="#">Advent Of Code</a>
-  <ul class="options4">  
-    <li class=""> <a href="aoc19.html">2019 </a></li>
+  <ul class="options4">
+    <li class=""> <a href="aoc18.html">2018</a></li>
+    <li class=""> <a href="aoc19.html">2019</a></li>
   </ul>
 
 </li>
@@ -53,12 +55,14 @@ document.getElementById("navbar").innerHTML = (`<div><li class="button1"> <a hre
     <li class=""> <a href="#">Qualifications</a> </li>
   </ul>
 </li>
-<li class="button4"> <a href="#">Contact info</a> 
-<ul class="options4">
-  <li class=""> <a href="contactForm.html">Contact form</a> </li>
-  <li class=""> <a href="#">Social Media</a> </li>
-  <li class=""> <a href="#">Get in touch</a> </li>
-</ul></li></div>
+<li class="button4"> <a href="#">Contact info</a>
+  <ul class="options4">
+    <li class=""> <a href="contactForm.html">Contact form</a> </li>
+    <li class=""> <a href="#">Social Media</a> </li>
+    <li class=""> <a href="#">Get in touch</a> </li>
+  </ul>
+</li>
+</div>
 `)
 
 
