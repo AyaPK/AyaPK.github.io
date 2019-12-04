@@ -35,18 +35,14 @@ document.getElementById("navbar").innerHTML = (`<div>
     <li class=""> <a href="http://twitter.com/TheUSOfficeBot">The US Office Bot</a> </li>
     <li class=""> <a href="http://twitter.com/PokeFusionsBot">Pokémonstrosities</a> </li>
   </ul>
-
 </li>
 
-<li class="button4"> <a href="#">Advent Of Code</a>
-  <ul class="options4">
+<li class="button7"> <a href="#">Advent Of Code</a>
+  <ul class="options7">
     <li class=""> <a href="aoc18.html">2018</a></li>
     <li class=""> <a href="aoc19.html">2019</a></li>
   </ul>
-
 </li>
-
-
 
 
 <li class="button3"> <a href="#">About me</a>
@@ -75,6 +71,7 @@ $(window).bind("load", function () {
   $('.options4').hide()
   $('.options5').hide()
   $('.options6').hide()
+  $('.options7').hide()
 
   $('.button1').hover(function () {
     $(this).toggleClass("active");
@@ -104,6 +101,11 @@ $(window).bind("load", function () {
   $('.button6').hover(function () {
     $(this).toggleClass("active");
     $('.options6').slideToggle(200);
+  })
+
+  $('.button7').hover(function () {
+    $(this).toggleClass("active");
+    $('.options7').slideToggle(200);
   })
 });
 

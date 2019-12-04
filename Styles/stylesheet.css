@@ -87,6 +87,12 @@ a {
   display: block;
 }
 
+.options7 {
+  font-size: 14px;
+  height: 14px;
+  display: block;
+}
+
 .active {
   background-color: #2b2b2b;
 }
