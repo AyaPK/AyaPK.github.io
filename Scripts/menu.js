@@ -37,6 +37,12 @@ document.getElementById("navbar").innerHTML = (`<div>
   </ul>
 </li>
 
+<li class="button8"> <a href="#">WebApps Development</a>
+  <ul class="options8">
+    <li class=""> <a href="https://www.pkmnbreedingsim.firebaseapp.com">Pokémon Breeding Simulator</a></li>
+  </ul>
+</li>
+
 <li class="button7"> <a href="#">Advent Of Code</a>
   <ul class="options7">
     <li class=""> <a href="aoc18.html">2018</a></li>
@@ -72,6 +78,7 @@ $(window).bind("load", function () {
   $('.options5').hide()
   $('.options6').hide()
   $('.options7').hide()
+  $('.options8').hide()
 
   $('.button1').hover(function () {
     $(this).toggleClass("active");
@@ -106,6 +113,11 @@ $(window).bind("load", function () {
   $('.button7').hover(function () {
     $(this).toggleClass("active");
     $('.options7').slideToggle(200);
+  })
+  
+  $('.button8').hover(function () {
+    $(this).toggleClass("active");
+    $('.options8').slideToggle(200);
   })
 });
 
