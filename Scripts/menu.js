@@ -53,7 +53,7 @@ document.getElementById("navbar").innerHTML = (`<div>
 
 <li class="button3"> <a href="#">About me</a>
   <ul class="options3">
-    <li class=""> <a href="#">Skillset</a> </li>
+    <li class=""> <a href="skillset">Skillset</a> </li>
     <li class=""> <a href="#">Qualifications</a> </li>
   </ul>
 </li>
