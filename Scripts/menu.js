@@ -5,7 +5,7 @@ document.getElementById("navbar").innerHTML = (`<div>
 
   <ul class="options2">
     <!-- <li class=""> <a href="dndGenerator.html">DnD Character Sheet</a> </li> -->
-    <li class=""> <a href="fizzbuzz.html">FizzBuzz Generator</a> </li>
+    <li class=""> <a href="fizzbuzz">FizzBuzz Generator</a> </li>
     <li class=""> <a href="passwordTester.html">Password Validator</a> </li>
     <li class=""> <a href="bingoCard.html">Javascript Bingo Game</a> </li>
     <li class=""> <a href="8ball.html">8ball</a> </li>
