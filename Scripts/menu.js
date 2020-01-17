@@ -65,7 +65,7 @@ document.getElementById("navbar").innerHTML = (`<div>
   </ul>
 </li>
 
-<img src="images/AyaLogoDarkMode.png" class="mainlogo">
+<img src="Images/AyaLogoDarkMode.png" class="mainlogo">
 </div>
 `)
 
