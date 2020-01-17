@@ -64,6 +64,8 @@ document.getElementById("navbar").innerHTML = (`<div>
     <li class=""> <a href="#">Get in touch</a> </li>
   </ul>
 </li>
+
+<img src="images/AyaLogoDarkMode.png" class="mainlogo">
 </div>
 `)
 

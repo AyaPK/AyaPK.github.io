@@ -158,3 +158,11 @@ code {
   width: 50%;
   text-align: left;
 }
+
+.mainlogo {
+  width: 250px;
+  float: right;
+  top: 40px;
+  right: 0px;
+  position: absolute;
+}
