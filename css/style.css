@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-top: 0;
 }
 .info li .first-block {
-  width: 40%;
+  width: 30%;
   display: inline-block;
   color: #000;
   font-weight: bold;
@@ -1338,3 +1338,5 @@ input[type="text"] {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
