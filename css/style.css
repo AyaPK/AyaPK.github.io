@@ -1339,4 +1339,33 @@ input[type="text"] {
 }
 /*# sourceMappingURL=style.css.map */
 
+.flex-box {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 30%;
+  width: 40%;
+}
 
+.flex-box #myCarousel{
+  flex: 1 1 50%;
+}
+
+
+.header1a {
+  width: 100%;
+  padding-left: 30%;
+  padding-top: 50px;
+}
+
+.documentcollection {
+  width: 80%;
+  padding-left: 15%;
+}
+
+.bottompad {
+  padding-bottom: 50px;
+}
+
+.bottompad > p {
+  text-align: center;
+}
