@@ -7,12 +7,9 @@ html, body
   font-size: 10pt;
   font-weight: normal;
   font-style: normal;
-  color: #2e313a;
+  color: #dddddd;
   margin-top: 0px;
-  background: #FFF;
-	background-image: -webkit-linear-gradient(top, #536455, #f5f100); 
-	background-image:    -moz-linear-gradient(top, #025a09, #025a09);
-	background-image:         linear-gradient(to bottom, #536455, #025a09);
+  background: url(../img/bg_img.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -101,7 +98,7 @@ figure.play:before {
   width: 80%;
   max-width: 1800px;
   min-height: 75%;
-  color: #000;
+  color: rgb(216, 213, 213);
   position: absolute;
   top: 14%;
   bottom: 0;
@@ -251,8 +248,19 @@ li { margin-left: -1em }
 }
 
 /* images for the slides */
-
-.jay { background-image: url("img/ollie.png"); } 
+.ka  { background-image: url("../images/ka_gif.gif"); }
+.ssq { background-image: url("../images/ssq_gif.gif"); }
+.goe { background-image: url("../images/goe_gif.gif"); }
+.geo { background-image: url("../images/geo_gif.gif"); }
+.mr2 { background-image: url("../images/mr2_gif.gif"); }
+.ichi { background-image: url("../images/ichi_gif.gif"); }
+.paz { background-image: url("../images/paz_gif.gif"); }
+.duet { background-image: url("../images/duet_gif.gif"); }
+.eot { background-image: url("../images/eot_gif.gif"); }
+.ice { background-image: url("../images/ice_gif.gif"); }
+.toki { background-image: url("../images/toki_gif.gif"); }
+.jay { background-image: url("../images/picture.jpg"); } 
+.stagerush { background-image: url("../images/stagerush.jpg"); } 
 
 .youtube
 {
@@ -410,10 +418,11 @@ li { margin-left: -1em }
   font-weight: normal;
   width: 100%;
   font-style: normal;
-  color: #2e313a;
+  color: #ffffff;
   margin-top: 5%;
   text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
   margin-bottom: 0px;
+  text-shadow: 3px 3px #000000;
 }
 
 #sub-title
@@ -422,7 +431,7 @@ li { margin-left: -1em }
   font-size: 13pt;
   font-weight: normal;
   font-style: normal;
-  color: #2e313a;
+  color: #ffffff;
   margin-bottom: 0px;
   margin-top: -0.5em;
   text-align: right;
@@ -436,13 +445,14 @@ li { margin-left: -1em }
   font-size: 10pt;
   font-weight: normal;
   font-style: normal;
-  color: #2e313a;
+  color: #ffffff;
   margin-bottom: 1em;
   margin-top: 2em;
   line-height: 2em;
   font-size: 1.2em;
   text-align: center;
   letter-spacing: 0.003em;
+  text-shadow: 2px 2px #000000;
 }
 
 #intro-text a:link, #intro-text a:visited, #intro-text a
