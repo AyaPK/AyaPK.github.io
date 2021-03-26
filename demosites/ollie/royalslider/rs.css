@@ -532,7 +532,7 @@ margin: auto;
 *  8. Global caption
 *
 ****************/
-.rsDefault .rsGCaption {
+/*.rsDefault .rsGCaption {
 	/*position: absolute;
 	float: none;
 	bottom: 6px;
@@ -548,3 +548,4 @@ margin: auto;
 	font-size: 12px;
 	border-radius: 2px;
 }
+*/
