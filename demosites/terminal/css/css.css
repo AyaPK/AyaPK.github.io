@@ -1,5 +1,6 @@
 :root {
     --bg-color: rgb(0, 0, 0);
+    --highlight: rgb(0, 0, 0);
     --fg-color: rgb(255, 255, 255);
   }
 
@@ -9,11 +10,10 @@
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: 'VT323', monospace;
-    padding-left: 1%;
 }
 
 .area {
-    width: 60%;
+    width: 100%;
 }
 
 .navarea > .area > .header {
@@ -28,7 +28,7 @@
 .navline-selected {
     padding-right: 10px;
     background-color:var(--fg-color);
-    color: var(--bg-color);
+    color: var(--highlight);
 }
 
 .pretext {
@@ -91,3 +91,14 @@
   }
 
   
+
+  #container {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  #container canvas, #overlay {
+    position: absolute;
+    
+    width: 100%;
+  }
