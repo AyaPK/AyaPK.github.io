@@ -10,19 +10,23 @@
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: 'VT323', monospace;
+    
 }
 
 .area {
-    width: 100%;
+    width: 60%;
+    margin-left: 1%;
 }
 
 .navarea > .area > .header {
     font-size: 72px;
+    margin-left: 1%;
 }
 
 .content{
     font-size: 30px;
     display: none;
+    margin-left: 1%;
 }
 
 .navline-selected {
@@ -94,8 +98,6 @@
 
   #container {
     position: relative;
-    left: 0;
-    top: 0;
   }
   #container canvas, #overlay {
     position: absolute;
