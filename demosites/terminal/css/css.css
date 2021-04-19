@@ -15,6 +15,7 @@
 }
 
 .navline-selected {
+    padding-right: 10px;
     background-color: white;
     color: black;
 }
@@ -22,7 +23,7 @@
 .animateTextArea {
     position: relative;
     display: inline-block;
-    line-height: 24px;
+    line-height: 50px;
     font-size: 72px;
     color: white;
     padding-bottom: 50px;
@@ -30,7 +31,7 @@
 }
 
 .animateTextArea::after {
-    margin-top: 20px;
+    margin-top: 34px;
     content: "";
     position: absolute;
     top: 0;
@@ -72,3 +73,5 @@
       width: 480px;
       font-size: 30px;
   }
+
+  

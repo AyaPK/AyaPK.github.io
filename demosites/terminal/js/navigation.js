@@ -24,18 +24,3 @@ $(".area").click(function () {
     $(this).children(".content").slideToggle(500)
 })
 
-var stringToAdd = "Aya website hahaha...";
-var index = 0;
-function addLetter(){
-    $(".animateTextArea").append(stringToAdd[index]);
-    index++;
-    if(index > stringToAdd.length){
-        clearInterval(running);
-    }
-}
-jQuery(document).ready(function() {
-    $(".animateTextArea").append("> ");
-    setTimeout(function() {
-        var running = setInterval(addLetter, 100);
-    }, 1000);
-});
