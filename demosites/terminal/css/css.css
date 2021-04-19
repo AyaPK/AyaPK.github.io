@@ -1,6 +1,13 @@
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --fg-color: rgb(255, 255, 255);
+  }
+
+
+
 * {
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     font-family: 'VT323', monospace;
     padding-left: 1%;
 }
@@ -20,13 +27,13 @@
 
 .navline-selected {
     padding-right: 10px;
-    background-color: white;
-    color: black;
+    background-color:var(--fg-color);
+    color: var(--bg-color);
 }
 
 .pretext {
     font-size: 30px;
-    color: white;
+    color: var(--fg-color);
 }
 
 .animateTextArea {
@@ -34,7 +41,7 @@
     display: inline-block;
     line-height: 50px;
     font-size: 72px;
-    color: white;
+    color: var(--fg-color);
     padding-bottom: 50px;
     padding-top: 30px;
 }
@@ -47,7 +54,7 @@
     right: -15px;
     /* Remove display: inline-block if not required to be on the same line as text etc */
     display: inline-block;
-    background-color: #606060;
+    background-color: var(--fg-color);
     vertical-align: top;
     width: 10px;
     /* Set height to the line height of .text */
