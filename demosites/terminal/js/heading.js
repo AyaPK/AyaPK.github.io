@@ -1,4 +1,3 @@
-
 function animation(){
     var stringToAdd = $(".animateTextArea").html();
     $(".animateTextArea").html("> ");
