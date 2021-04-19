@@ -1,0 +1,74 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: 'VT323', monospace;
+    padding-left: 1%;
+}
+
+.navarea > .area > .header {
+    font-size: 72px;
+}
+
+.navarea > .area > .content{
+    font-size: 30px;
+    display: none;
+}
+
+.navline-selected {
+    background-color: white;
+    color: black;
+}
+
+.animateTextArea {
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 72px;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.animateTextArea::after {
+    margin-top: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: #606060;
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 50px;
+    /* 
+    Animation paramaters:
+    blink = animation-name, 
+    1s = animation-duration, 
+    step-end = animation-timing-function,
+    infinite = animation-iteration-count
+    */
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+  .instructions {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 480px;
+      font-size: 30px;
+  }
