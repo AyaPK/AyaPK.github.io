@@ -1,8 +1,9 @@
 $(".navarea .area:nth-child(1) .header span").addClass("navline-selected")
 
-$(".area").click(function () {
-    if ($(this).children(".header").children("span").hasClass("navline-selected")) {
-        var html = $(this).children(".header").children("span");
+$(".area .header").click(function () {
+    var area = $(this).parent();
+    if ($(area).children(".header").children("span").hasClass("navline-selected")) {
+        var html = $(area).children(".header").children("span");
         var t = html.html();
         if (html.html().indexOf("v") != -1) {
             html.html(t.replace("v", "&gt;"));
@@ -11,8 +12,8 @@ $(".area").click(function () {
         }
     } else {
         $(".navline-selected").removeClass("navline-selected")
-        $(this).children(".header").children("span").addClass("navline-selected")
-        var html = $(this).children(".header").children("span");
+        $(area).children(".header").children("span").addClass("navline-selected")
+        var html = $(area).children(".header").children("span");
         var t = html.html();
         if (html.html().indexOf("v") != -1) {
             html.html(t.replace("v", "&gt;"));
@@ -21,6 +22,6 @@ $(".area").click(function () {
         }
     }
 
-    $(this).children(".content").slideToggle(500)
+    $(area).children(".content").slideToggle(500)
 })
 
