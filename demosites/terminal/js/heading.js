@@ -3,7 +3,11 @@ function animation(){
     $(".animateTextArea").html("> ");
     var index = 0;
     function addLetter(){
+        if (stringToAdd[index] == "\\"){
+            $(".animateTextArea").append("<br>> ");
+        } else {
         $(".animateTextArea").append(stringToAdd[index]);
+        }
         index++;
     }
 
