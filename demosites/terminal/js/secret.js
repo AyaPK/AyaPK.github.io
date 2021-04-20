@@ -1,4 +1,4 @@
-var secret = "3838404037393739666513"; //Konami Code
+var secret = "38384040373937396665"; //Konami Code
 var input = "";
 var timer;
 var mode = false;
