@@ -1,8 +1,19 @@
 body {
-    background-color: rgb(9, 9, 9);
+    background-color: rgb(187, 113, 125);
+    text-shadow: 2px 2px 4px #000000;
+
     color: white;
 }
 
 .bongo-cat {
     width: 20%;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
