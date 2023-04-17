@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Training CSS/HTML Website by Aya!</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
     <meta name="description" content="description"/>
     <meta name="Author" content="Aya" />
     <meta charset="UTF-8" />
@@ -17,9 +17,7 @@
   </div>
 
     <div class="lists">
-
         <div>
-
             <h2>Programming languages I know</h2>
             <ul>
                 <li>Literally none</li>
@@ -29,7 +27,7 @@
                 <li>Javascript</li>
                 <li>Also cats</li>
             </ul>
-    </div>
+        </div>
 
     <div>
 
@@ -41,32 +39,52 @@
             <li>Memes</li>
             <li>Cats again</li>
         </ul>
-    
     </div>
-</div>
+        </div>
 
-<div class="table-div">
+    <div class="table-div">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>OMG!</th>
+                    <th>A Table!!!</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>You can put stuff here!</td>
+                    <td>That's so cool???</td>
+                </tr>
+                <tr>
+                    <td>Also here!!</td>
+                    <td>I know, right??</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<table class="styled-table">
-    <thead>
-        <tr>
-            <th>OMG!</th>
-            <th>A Table!!!</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>You can put stuff here!</td>
-            <td>That's so cool???</td>
-        </tr>
-        <tr>
-            <td>Also here!!</td>
-            <td>I know, right??</td>
-        </tr>
-    </tbody>
-</table>
-
-</div>
+    <div class="container">
+        <form onSubmit={handleOnSubmit}>
+            <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email"
+            />
+            <input
+            id="subject"
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            />
+            <textarea
+            id="message"
+            name="message"
+            placeholder="Type your message"
+            ></textarea>
+            <button type="submit"> Send Message </button>
+        </form>
+    </div>
 </body>
 
 <footer>
@@ -77,6 +95,3 @@
     <marquee>WEEEEEEEEEEEEEEEEEE!!</marquee>
 </footer>
 </html>
-
-
-
