@@ -1,21 +1,20 @@
+konamiSecret = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+pointer = 0;
+var inputs = [];
 
-function konamiCode(cb) {
-    var secret = "38384040373937396665"; //Konami Code
-    var input = '';
+document.addEventListener('keydown', function (e) {
+    if(e.key == konamiSecret[pointer]) {
+        inputs.push(e.key)
+        pointer++;
+    }else{
+        inputs = []
+        pointer=0
+    }
 
-    document.addEventListener('keydown', function (e) {
-      input += ("" + e);
+    if(inputs.join("") == konamiSecret.join("")) {
+        alert("You now have more lives!")
+    }
+});
 
-      if (input === secret) {
-        return cb();
-      }
 
-      if (!secret.indexOf(input)) return;
-      input = ("" + e);
-      console.log(input)
-      
-    });
 
-  }
-  
-  konamiCode(function () {alert('done')})
