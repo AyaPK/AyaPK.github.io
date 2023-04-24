@@ -108,3 +108,102 @@ body {
         }
     }
 }
+
+
+.area {
+    width: 60%;
+    margin-left: 1%;
+}
+
+.navarea > .area > .header {
+    font-size: 72px;
+    margin-left: 1%;
+}
+
+.content{
+    font-size: 30px;
+    display: none;
+    margin-left: 1%;
+}
+
+.navline-selected {
+    padding-right: 10px;
+    background-color:var(--fg-color);
+    color: var(--highlight);
+}
+
+.pretext {
+    font-size: 30px;
+    color: var(--fg-color);
+}
+
+.animateTextArea {
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 72px;
+    color: var(--fg-color);
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.animateTextArea::after {
+    margin-top: 2px;
+    content: "";
+    position: relative;
+    top: 0;
+    right: -15px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: var(--fg-color);
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 60px;
+    /* 
+    Animation paramaters:
+    blink = animation-name, 
+    1s = animation-duration, 
+    step-end = animation-timing-function,
+    infinite = animation-iteration-count
+    */
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+  .instructions {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 480px;
+      font-size: 30px;
+  }
+
+  .canv {
+    position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  #container {
+    position: relative;
+  }
+  #container canvas, #overlay {
+    position: absolute;
+    
+    width: 100%;
+  }
