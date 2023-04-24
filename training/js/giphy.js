@@ -6,6 +6,9 @@ fetch("https://api.giphy.com/v1/gifs/trending?api_key="+API_KEY+"&limit=10&ratin
   .then((response) => response.json())
   .then((data) => {
     data["data"].forEach(img => {
-        document.getElementById("img_"+dumb_iteration_test).src = img["embed_url"]
+        console.log(img)
+        document.getElementById("img_"+dumb_iteration_test).src = img["images"]["fixed_height"]["url"];
+        console.log(img["embed_url"])
+        dumb_iteration_test++;
     });
   })
