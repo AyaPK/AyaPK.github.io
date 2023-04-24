@@ -1,20 +1,19 @@
 konamiSecret = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
 pointer = 0;
-var inputs = [];
 var textcolor = "rgb(187, 113, 125)";
-
+bgcol = 'rgba(187, 113, 125, .2)'
 
 document.addEventListener("keydown", function (e) {
     if(e.key == konamiSecret[pointer]) {
-        inputs.push(e.key)
         pointer++;
     }else{
-        inputs = []
-        pointer=0
+        pointer = 0
     }
 
-    if(inputs.join("") == konamiSecret.join("")) {
+    if(pointer === konamiSecret.length) {
         textcolor = "rgb(0, 100, 0)"
+        bgcol = "rgba(0, 0, 0, .2)"
+        document.body.style.setProperty("color", "rgb(0, 255, 0)");
     }
 });
 
@@ -34,7 +33,7 @@ function rain() {
         drops[i] = 1;
     }
     function draw() {
-        ctx.fillStyle = 'rgba(187, 113, 125, .2)';
+        ctx.fillStyle = bgcol;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         for (var i = 0; i < drops.length; i++) {
             var text = letters[Math.floor(Math.random() * letters.length)];
