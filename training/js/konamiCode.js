@@ -11,8 +11,8 @@ document.addEventListener("keydown", function (e) {
     }
 
     if(pointer === konamiSecret.length) {
-        textcolor = "rgb(0, 100, 0)"
-        bgcol = "rgba(0, 0, 0, .2)"
+        textcolor = "rgb(0, 200, 0)"
+        bgcol = "rgba(0, 0, 0, .05)"
         document.body.style.setProperty("color", "rgb(0, 255, 0)");
     }
 });
