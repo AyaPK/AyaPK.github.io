@@ -5282,6 +5282,16 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .modal-dialog {
+    position: relative;
+    width: 95%;
+    margin: var(--bs-modal-margin);
+    pointer-events: none;
+  }
+}
+
 .modal.show .modal-dialog {
   transform: none;
 }
