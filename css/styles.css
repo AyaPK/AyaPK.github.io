@@ -5887,6 +5887,13 @@ textarea.form-control-lg {
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
+@media only screen and (max-width: 600px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    align-items: end;
+    justify-content: end;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
   .carousel-control-next {
