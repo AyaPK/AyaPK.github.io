@@ -11094,3 +11094,48 @@ html {
 .dropshadow-light {
   text-shadow: 2px 2px 3px #000000
 }
+
+#betterCarousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.fixed-height-carousel {
+height: 300px;
+overflow: hidden;
+width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .fixed-height-carousel {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .fixed-height-carousel {
+  height: 400px;
+  overflow: hidden;
+  width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .fixed-height-carousel {
+  height: 450px;
+  overflow: hidden;
+  width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .fixed-height-carousel {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+  }
+}
