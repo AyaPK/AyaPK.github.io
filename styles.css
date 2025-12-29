@@ -6,6 +6,7 @@
 
 html {
     color-scheme: dark;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
 }
 
@@ -36,10 +38,105 @@ body {
 
 .container {
     text-align: center;
-    max-width: 800px;
+    max-width: 920px;
     padding: 2rem;
     position: relative;
     z-index: 1;
+}
+
+.view-stack {
+    position: relative;
+    width: 100%;
+    max-width: calc(100vw - 4rem);
+    margin: 0 auto;
+}
+
+.view {
+    position: relative;
+}
+
+#home-view {
+    transform: none;
+    opacity: 1;
+}
+
+#portfolio-view {
+    transform: none;
+    opacity: 1;
+    margin-top: 2.5rem;
+}
+
+.view-stack.is-portfolio #home-view {
+    transform: none;
+    opacity: 1;
+}
+
+.view-stack.is-portfolio #portfolio-view {
+    transform: none;
+    opacity: 1;
+}
+
+.js .view-stack {
+    width: 760px;
+    max-width: calc(100vw - 4rem);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.js .view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 450ms ease, opacity 180ms ease;
+    will-change: transform, opacity;
+}
+
+.js #home-view {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.js #portfolio-view {
+    transform: translateX(110%);
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 0;
+}
+
+.js .view-stack.is-portfolio #home-view {
+    position: absolute;
+    transform: translateX(-110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.js .view-stack.is-portfolio #portfolio-view {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#back-btn {
+    display: none;
+}
+
+.js #back-btn {
+    display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .view {
+        transition: none;
+    }
+}
+
+#portfolio-view main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
@@ -96,6 +193,62 @@ header h2 {
     min-width: 200px;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+    margin: 0 auto 2rem;
+    width: 50%;
+}
+
+.portfolio-item {
+    padding: 0;
+}
+
+.portfolio-title {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: -5.5rem;
+    margin-top: 0.35rem;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 0.55) 45%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.portfolio-desc {
+    opacity: 0.9;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+    font-size: 0.98rem;
+}
+
+.portfolio-url {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    font-size: 0.92rem;
 }
 
 .link-item:hover {

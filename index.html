@@ -41,27 +41,76 @@
       property="twitter:image"
       content="http://www.ayasca.dev/image.png"
     />
+	<script>
+		document.documentElement.classList.add('js');
+	</script>
 </head>
 <body>
 	<canvas id="bg-canvas" aria-hidden="true"></canvas>
     <div class="container">
-        <header>
-            <h1>Aya Stead</h1>
-            <h2>Software Engineer | Problem Solver | Game Dev</h2>
-        </header>
-        
-        <main>
-            <nav class="links">
-                <a href="https://github.com/ayaPK" class="link-item" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/aya-s-stead/" target="_blank" class="link-item">LinkedIn</a>
-                <a href="https://techwaifu.itch.io" target="_blank" class="link-item">Itch.io</a>
-                <a href="mailto:aya.pk.contact@gmail.com" class="link-item">Email</a>
-            </nav>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Aya Stead</p>
-        </footer>
+        <div class="view-stack" id="view-stack">
+            <section class="view is-active" id="home-view" aria-label="Home">
+                <header>
+                    <h1 tabindex="-1">Aya Stead</h1>
+                    <h2>Software Engineer | Problem Solver | Game Dev</h2>
+                </header>
+                
+                <main>
+                    <nav class="links">
+                        <a href="https://github.com/ayaPK" class="link-item" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/aya-s-stead/" target="_blank" class="link-item">LinkedIn</a>
+                        <a href="https://techwaifu.itch.io" target="_blank" class="link-item">Itch.io</a>
+                        <a href="mailto:aya.pk.contact@gmail.com" class="link-item">Email</a>
+                        <button type="button" class="link-item" id="portfolio-btn" aria-controls="portfolio-view" aria-expanded="false">Portfolio</button>
+                    </nav>
+                </main>
+                
+                <footer>
+                    <p>&copy; 2025 Aya Stead</p>
+                </footer>
+            </section>
+
+            <section class="view" id="portfolio-view" aria-label="Portfolio">
+                <header>
+                    <h1 id="portfolio-heading" tabindex="-1">Portfolio</h1>
+                    <h2>A few things I've built</h2>
+                </header>
+
+                <main>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <a class="portfolio-title" href="https://github.com/AyaPK/MaGE" target="_blank" rel="noopener noreferrer">MaGE</a>
+                            <p class="portfolio-desc">University dissertation Final Year Project.<br>Titled "Using Technology to Make Gender Transition Easier."</p>
+                            <a class="portfolio-url" href="https://github.com/AyaPK/MaGE" target="_blank" rel="noopener noreferrer">https://github.com/AyaPK/MaGE</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <a class="portfolio-title" href="https://pkmn.ayaspace.co.uk" target="_blank" rel="noopener noreferrer">Pokémon Breeding Simulator</a>
+                            <p class="portfolio-desc">Made to help competitive Pokémon players calculate<br>how to best breed their Pokémon teams.</p>
+                            <a class="portfolio-url" href="https://pkmn.ayaspace.co.uk" target="_blank" rel="noopener noreferrer">https://pkmn.ayaspace.co.uk</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <a class="portfolio-title" href="https://techwaifu.itch.io/lumenless" target="_blank" rel="noopener noreferrer">Lumenless</a>
+                            <p class="portfolio-desc">Heavily stylised puzzle platformer.<br>Placed 8th out of 197 entries in GWJ87.</p>
+                            <a class="portfolio-url" href="https://techwaifu.itch.io/lumenless" target="_blank" rel="noopener noreferrer">https://techwaifu.itch.io/lumenless</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <a class="portfolio-title" href="https://github.com/AyaPK/slack-plays-pokemon" target="_blank" rel="noopener noreferrer">Slack Plays Pokémon</a>
+                            <p class="portfolio-desc">Allows a group of users to play Pokémon together.<br>Played via a slackbot using the Slack API.</p>
+                            <a class="portfolio-url" href="https://github.com/AyaPK/slack-plays-pokemon" target="_blank" rel="noopener noreferrer">https://github.com/AyaPK/slack-plays-pokemon</a>
+                        </div>
+                    </div>
+                    <nav class="links">
+                        <button type="button" class="link-item" id="back-btn" aria-controls="home-view">Back</button>
+                    </nav>
+                </main>
+            </section>
+        </div>
     </div>
     
     <script src="script.js"></script>

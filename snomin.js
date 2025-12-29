@@ -192,7 +192,7 @@ function render(ctx, w, h, scene, time, mouseX, mouseY) {
     }
 
     const glow = ctx.createRadialGradient(w * 0.5, h * 0.55, 0, w * 0.5, h * 0.55, Math.max(w, h) * 0.7);
-    glow.addColorStop(0, 'rgba(0, 255, 200, 0.05)');
+    glow.addColorStop(0, 'rgba(255, 0, 212, 0.05)');
     glow.addColorStop(0.6, 'rgba(120, 80, 255, 0.03)');
     glow.addColorStop(1, 'rgba(255, 255, 255, 0)');
     ctx.fillStyle = glow;
